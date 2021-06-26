@@ -1,5 +1,5 @@
 <?php
-include('crudmhs.php');
+include ('crudmhs.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,5 +40,6 @@ echo "
 echo '</table>';
 }
 ?>
+<a href="tambahmhs.php">Tambah Data Mahasiswa</a>
 </body>
 </html>

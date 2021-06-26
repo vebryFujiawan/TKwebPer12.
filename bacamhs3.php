@@ -1,5 +1,5 @@
 <?php
-    include('crudmhs.php');
+    include ('crudmhs.php');
 ?>
 
 <!DOCTYPE html>
@@ -43,13 +43,9 @@
             $kelamin = $mhs['kelamin'];
             echo "
             <tr>
-            <td>&emsp; $nim</td>
-            </tr>
-            <tr>
-            <td>&emsp; $nama</td>
-            </tr>
-            <tr>
-            <td>&emsp; $kelamin</td>
+                <td>&emsp; $nim</td>
+                <td>&emsp; $nama</td>
+                <td>&emsp; $kelamin</td>
             </tr>
             ";
             }

@@ -36,3 +36,25 @@ function bacaMhsPerjurusan($jurusan){
 function cariMhsDariNim($nim){
     return bacaMhs("SELECT * from mahasiswa WHERE nim ='$nim'");
 }
+
+function tambahMhs($nim, $nama, $kelamin, $jurusan){
+    $koneksi = koneksiAkademik();
+    $sql = "insert into mahasiswa values('$nim', '$nama', '$kelamin', '$jurusan')";
+    $hasil = 0;
+    if(mysqli_query($koneksi, $sql))
+    $hasil = 1;
+    mysqli_close($koneksi);
+    return $hasil;
+}
+
+// menghapus 1 record berdasar field kunci nim
+function hapusMhs($nim){
+$koneksi = koneksiAkademik();
+$sql = "delete from mahasiswa where nim='$nim'";
+if (!mysqli_query($koneksi, $sql)){
+die('Error: ' . mysqli_error());
+}
+$hasil = mysqli_affected_rows($koneksi);
+mysqli_close($koneksi);
+return $hasil;
+}
